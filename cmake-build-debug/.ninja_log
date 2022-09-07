@@ -1,0 +1,19 @@
+# ninja log v5
+3	1629	6836547942699928	CMakeFiles/CPPCode.dir/quick_sort.cpp.obj	824434e2471e4341
+1629	1818	6836547944327852	CPPCode.exe	432127ff4a33820d
+0	2813	6842753935674253	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+2818	3203	6842753939474175	FastInverseSquareRoot.exe	f15769465b2bf2b8
+5	1414	6842754270823525	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1414	1551	6842754272223478	FastInverseSquareRoot.exe	f15769465b2bf2b8
+7	1460	6842754590391089	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1460	1599	6842754591791120	FastInverseSquareRoot.exe	f15769465b2bf2b8
+5	1726	6842755076027736	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1726	1866	6842755077428193	FastInverseSquareRoot.exe	f15769465b2bf2b8
+5	1641	6842755748275102	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1641	1806	6842755749786202	FastInverseSquareRoot.exe	f15769465b2bf2b8
+9	1707	6842756940744434	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1707	1857	6842756942197469	FastInverseSquareRoot.exe	f15769465b2bf2b8
+8	1638	6842757120670215	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1638	1795	6842757122169914	FastInverseSquareRoot.exe	f15769465b2bf2b8
+9	1694	6842757359894400	CMakeFiles/FastInverseSquareRoot.dir/FastInverseSquareRoot.cpp.obj	8502e6fb13af49e0
+1694	1841	6842757361303439	FastInverseSquareRoot.exe	f15769465b2bf2b8
