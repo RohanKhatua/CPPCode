@@ -32,7 +32,7 @@ int main(){
     for (int i=0;i<INT_MAX;i++){
         float x = rand();
         float ans=general_sqrt(x);
-//        cout<<ans<<endl;
+        //376.789 seconds on average
     }
     general_time=clock()-general_time;
 
@@ -40,7 +40,9 @@ int main(){
     for (int i=0;i<INT_MAX;i++){
         float x = rand();
         float ans=Q_rsqrt(x);
-//        cout<<ans<<endl;
+//      48.062 seconds on average
+//      87% reduction
+
     }
     fast_time=clock()-fast_time;
 

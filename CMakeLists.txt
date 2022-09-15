@@ -9,3 +9,4 @@ add_executable(CPPCode
         partition.cpp)
 
 add_executable(FastInverseSquareRoot FastInverseSquareRoot.cpp)
+add_executable(dspa dspa.cpp)

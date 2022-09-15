@@ -108,6 +108,40 @@ build FastInverseSquareRoot.exe: CXX_EXECUTABLE_LINKER__FastInverseSquareRoot_De
   TARGET_IMPLIB = libFastInverseSquareRoot.dll.a
   TARGET_PDB = FastInverseSquareRoot.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target dspa
+
+
+#############################################
+# Order-only phony target for dspa
+
+build cmake_object_order_depends_target_dspa: phony || CMakeFiles/dspa.dir
+
+build CMakeFiles/dspa.dir/dspa.cpp.obj: CXX_COMPILER__dspa_Debug D$:/Github/CPPCode/dspa.cpp || cmake_object_order_depends_target_dspa
+  DEP_FILE = CMakeFiles\dspa.dir\dspa.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  INCLUDES = -ID:/Github/CPPCode/.
+  OBJECT_DIR = CMakeFiles\dspa.dir
+  OBJECT_FILE_DIR = CMakeFiles\dspa.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target dspa
+
+
+#############################################
+# Link the executable dspa.exe
+
+build dspa.exe: CXX_EXECUTABLE_LINKER__dspa_Debug CMakeFiles/dspa.dir/dspa.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\dspa.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = dspa.exe
+  TARGET_IMPLIB = libdspa.dll.a
+  TARGET_PDB = dspa.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -138,6 +172,8 @@ build CPPCode: phony CPPCode.exe
 
 build FastInverseSquareRoot: phony FastInverseSquareRoot.exe
 
+build dspa: phony dspa.exe
+
 # =============================================================================
 # Folder targets.
 
@@ -146,7 +182,7 @@ build FastInverseSquareRoot: phony FastInverseSquareRoot.exe
 #############################################
 # Folder: D:/Github/CPPCode/cmake-build-debug
 
-build all: phony CPPCode.exe FastInverseSquareRoot.exe
+build all: phony CPPCode.exe FastInverseSquareRoot.exe dspa.exe
 
 # =============================================================================
 # Built-in targets
