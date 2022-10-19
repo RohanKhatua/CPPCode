@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "CPPCode",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CPPCode::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CPPCode-Debug-e3f948aba6d8d3a5d7d5.json",
+					"name" : "CPPCode",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FastInverseSquareRoot::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FastInverseSquareRoot-Debug-d8ba830d8e36c6238dab.json",
+					"name" : "FastInverseSquareRoot",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HeapSort_21BCE3982::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HeapSort_21BCE3982-Debug-5bd348f959ba2bfb06bc.json",
+					"name" : "HeapSort_21BCE3982",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bst::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bst-Debug-9ff4d21bb12d50c39b2f.json",
+					"name" : "bst",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "dspa_21BCE3982::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-dspa_21BCE3982-Debug-a50c964fa217ba4505bc.json",
+					"name" : "dspa_21BCE3982",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/Github/CPPCode/cmake-build-debug",
+		"source" : "D:/Github/CPPCode"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}
