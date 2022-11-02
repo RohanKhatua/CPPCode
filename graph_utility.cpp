@@ -2,6 +2,8 @@
 #include <stdbool.h>
 using namespace std;
 
+class Edge;
+
 class Graph{
     public:
     int num_nodes;
