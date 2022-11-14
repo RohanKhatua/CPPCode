@@ -46,3 +46,4 @@ cmake-build-debug/CMakeFiles/new_prog.dir/new_prog.cpp.obj
 cmake-build-debug/Testing/Temporary/LastTest.log
 .idea/.gitignore
 CMakeLists.txt
+.vscode/launch.json

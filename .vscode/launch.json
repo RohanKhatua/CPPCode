@@ -2,23 +2,32 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C/C++ Runner: Debug Session",
+      "type": "java",
+      "name": "Launch articles",
+      "request": "launch",
+      "mainClass": "articles",
+      "projectName": "CPPCode_a2b4358d"
+    },
+    {
+      "name": "g++.exe - Build and debug active file",
       "type": "cppdbg",
       "request": "launch",
       "args": [],
       "stopAtEntry": false,
-      "externalConsole": true,
-      "cwd": "d:/Github/CPPCode",
-      "program": "d:/Github/CPPCode/build/Debug/outDebug",
+      "externalConsole": false,
+      "cwd": "${fileDirname}",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
       "MIMode": "gdb",
-      "miDebuggerPath": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
       "setupCommands": [
         {
           "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ]
+      ],
+
+      "preLaunchTask": "C/C++: g++.exe build active file"
     }
   ]
 }

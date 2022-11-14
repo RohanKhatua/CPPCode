@@ -4,5 +4,9 @@ C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/bst.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/dspa_21BCE3982.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/HeapSort_21BCE3982.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/graph_utility.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/roman_to_int.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/linked_list.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/testing.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/kruskal.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir
