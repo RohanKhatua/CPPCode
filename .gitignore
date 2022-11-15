@@ -47,3 +47,8 @@ cmake-build-debug/Testing/Temporary/LastTest.log
 .idea/.gitignore
 CMakeLists.txt
 .vscode/launch.json
+.fleet/
+.idea/
+.vscode/
+.build/
+.cmake-build-debug/
