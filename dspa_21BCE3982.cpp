@@ -13,14 +13,13 @@ bool vecContains(vi a, int x)
 
 int linear_search(const int *a, int n, int x, vi non_traversed_nodes)
 {
+    //returns the index where the closest node is if the node is contained in non_travsersed nodes
+    //the second check is done so we don't get an older node back
     for (int i = 0; i < n; i++)
     {
-        if (a[i] == x)
+        if (a[i] == x && vecContains(non_traversed_nodes,i))
         {
-            if (vecContains(non_traversed_nodes, i))
-            {
-                return i;
-            }
+            return i;
         }
     }
     return -1;
@@ -43,6 +42,7 @@ vi vecMinus(vi a, vi b)
 
 bool oneSidedVecEqual(vi a, vi b)
 {
+    //bigger vector first
     for (int &i : a)
     {
         if (!vecContains(b, i))
@@ -107,13 +107,11 @@ int main()
 
         for (int current_node : non_traversed_nodes)
         {
-
-            l[current_node] = adj[source][current_node];
+            l[current_node] = adj[source][current_node]; //initialising output vector l
         }
 
         while (!oneSidedVecEqual(all_nodes, traversed_nodes))
         {
-
             vi distances_to_non_traversed_nodes;
 
             distances_to_non_traversed_nodes.reserve(non_traversed_nodes.size());
@@ -125,16 +123,20 @@ int main()
 
             int min_distance = *min_element(distances_to_non_traversed_nodes.begin(),
                                             distances_to_non_traversed_nodes.end());
+            //finding the closest node
 
             int closest_node = linear_search(l, n, min_distance, non_traversed_nodes);
 
+            //avoiding duplicate nodes being added to traversed
             if (!vecContains(traversed_nodes, closest_node))
             {
                 traversed_nodes.push_back(closest_node);
             }
 
+            //update non traversed
             non_traversed_nodes = vecMinus(all_nodes, traversed_nodes);
 
+            //update l for all non_traversed
             for (int current_node : non_traversed_nodes)
             {
                 l[current_node] = min(l[current_node], l[closest_node] + adj[closest_node][current_node]);
