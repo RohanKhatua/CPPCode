@@ -33,6 +33,7 @@ void heapify(int* a, int n, int i){
 }
 
 void buildHeap(int* a, int n){
+    //heapifies the entire tree
     cout<<"Build Heap : "<<endl;
     cout<<"------------------"<<endl;
     for (int i=(n-1)/2;i>=0;i--){
