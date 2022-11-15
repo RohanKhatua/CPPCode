@@ -91,13 +91,7 @@ int main()
     for (int i = 0; i < n; i++)
     {
         all_nodes.push_back(i);
-    }
-
-    map<int, int> last_updated;
-    for (int &node : all_nodes)
-    {
-        last_updated[node] = node;
-    }
+    }    
 
     for (char source_name : node_names)
     {
@@ -144,12 +138,9 @@ int main()
             // update l for all non_traversed
             for (int current_node : non_traversed_nodes)
             {
-                int copy = l[current_node];
+                
                 l[current_node] = min(l[current_node], adj[closest_node][current_node]);
-                if (l[current_node] != copy)
-                {
-                    last_updated[current_node] = closest_node;
-                }
+                
             }
         }
 

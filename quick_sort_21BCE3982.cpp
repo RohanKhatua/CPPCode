@@ -13,7 +13,7 @@ int partition(int *a, int low, int high)
 {
     int pivot = a[high];
 
-    printArray(a);
+    // printArray(a);
     int i = low - 1;
     for (int j = low; j < high; j++)
     {
@@ -24,9 +24,8 @@ int partition(int *a, int low, int high)
         }
     }
     i++;
-    int temp = a[i];
+    a[high] = a[i];
     a[i] = pivot;
-    a[high] = temp;
     return i;
 }
 void quickSort(int *a, int low, int high)
