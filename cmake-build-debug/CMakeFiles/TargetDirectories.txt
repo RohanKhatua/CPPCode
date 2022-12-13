@@ -8,5 +8,7 @@ C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/roman_to_int.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/linked_list.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/testing.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/kruskal.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/BST.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/fast_mult.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir

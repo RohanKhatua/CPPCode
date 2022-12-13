@@ -1,201 +1,97 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-#define vi vector<int>
-
-class Node
-{
+class Node {
 public:
-    Node *l_child;
-    Node *r_child;
-    int value;
+    int data;
+    Node* l_child;
+    Node* r_child;
 
-    Node(Node *l_child, Node *r_child, int value)
-    {
-
-        this->l_child = l_child;
-        this->r_child = r_child;
-        this->value = value;
+    explicit Node(int data){
+        this->data=data;
+        l_child=nullptr;
+        r_child=nullptr;
     }
 };
 
-void insert_node(int item, Node *root_ptr)
-{
-    bool flag = false;
-
-    Node obj = Node(nullptr, nullptr, 0);
-    Node *ptr1 = &obj;
-    bool make_new_node = false;
-
-    while (root_ptr != nullptr && !flag)
-    {
-        if (item < root_ptr->value)
-        {
-            ptr1 = root_ptr;
-            root_ptr = root_ptr->l_child;
+bool search (Node* root, int key){
+    if (key<root->data){
+        if (root->l_child==nullptr){
+            return false;
         }
-        else if (item > root_ptr->value)
-        {
-            ptr1 = root_ptr;
-            root_ptr = root_ptr->r_child;
-        }
-        else
-            flag = true;
+        else search(root->l_child, key);
     }
 
-    if (root_ptr == nullptr)
-    {
-        make_new_node = true;
+    else if (key>root->data){
+        if (root->r_child==nullptr){
+            return false;
+        }
+        else search(root->r_child, key);
     }
 
-    if (make_new_node)
-    {
-        if (ptr1->value < item)
-        {
-            Node node = Node(nullptr, nullptr, item);
-            ptr1->r_child = &node;
-        }
-        else
-        {
-            Node node = Node(nullptr, nullptr, item);
-            ptr1->l_child = &node;
-        }
-    }
+    return true;
 }
 
-Node *successor(Node *p)
-{
-    Node *ptr1 = p->r_child;
-    if (ptr1 != nullptr)
-    {
-        while (ptr1->l_child != nullptr)
-        {
-            ptr1 = ptr1->l_child;
+pair<Node*,Node*> search_with_ptr (Node* root, int key){
+    //returns pointer to parent node
+    Node* ptr = root;
+    Node* ptr1 = new Node(0);
+
+    while (ptr!=nullptr){        
+        if (key<ptr->data){
+            ptr1=ptr;
+            ptr=ptr->l_child;
         }
+        else if (key>ptr->data){
+            ptr1=ptr;
+            ptr=ptr->r_child;
+        }
+        else return make_pair(ptr, ptr1);
     }
 
-    return ptr1;
+    return make_pair(nullptr, ptr1);
 }
 
-void delete_node(int item, Node *root_ptr)
-{
-    Node *copy_root_ptr = root_ptr;
-    bool flag = false;
-    Node *parent;
-    while (root_ptr != nullptr && !flag)
-    {
-        if (item < root_ptr->value)
-        {
-            parent = root_ptr;
-            root_ptr = root_ptr->l_child;
+void insert(Node* &root, int data){
+    if (data<root->data){
+        if (root->l_child!= nullptr){
+            insert(root->l_child, data);
         }
-        else if (item > root_ptr->value)
-        {
-            parent = root_ptr;
-            root_ptr = root_ptr->l_child;
-        }
-        else
-            flag = true;
-    }
-    if (flag)
-    {
-        int case_num;
-        if (root_ptr->l_child == nullptr && root_ptr->r_child == nullptr)
-        {
-            case_num = 1;
-        }
-        else if (root_ptr->l_child != nullptr && root_ptr->r_child != nullptr)
-        {
-            case_num = 3;
-        }
-        else
-            case_num = 2;
-
-        if (case_num == 1)
-        {
-            if (parent->l_child == root_ptr)
-            {
-                parent->l_child = nullptr;
-            }
-            else
-                parent->r_child = nullptr;
-        }
-
-        else if (case_num == 2)
-        {
-            if (parent->l_child == root_ptr)
-            {
-                if (root_ptr->l_child == nullptr)
-                {
-                    parent->l_child = root_ptr->r_child;
-                }
-                else
-                {
-                    parent->l_child = root_ptr->l_child;
-                }
-            }
-            else if (parent->r_child == root_ptr)
-            {
-                if (root_ptr->l_child == nullptr)
-                {
-                    parent->r_child = root_ptr->r_child;
-                }
-                else
-                {
-                    parent->r_child = root_ptr->l_child;
-                }
-            }
-        }
-
-        else
-        {
-            Node *ptr1 = successor(root_ptr);
-            int item1 = ptr1->value;
-            delete_node(item1, root_ptr);
-            root_ptr->value = item;
+        else {
+            Node* to_insert = new Node(data);
+            root->l_child=to_insert;
         }
     }
-    else
-    {
-        cout << "Item does not exist";
+
+    else if (data>root->data){
+        if (root->r_child!= nullptr){
+            insert(root->r_child, data);
+        }
+        else {
+            Node* to_insert = new Node(data);
+            root->r_child=to_insert;
+        }
     }
+
+    else {
+        cout<<"Value already present in BST";
+    }
+
+    
+
 }
 
-int main()
-{
-    Node root = Node(nullptr, nullptr, 15);
-    Node *root_ptr = &root;
+// void delete (Node* &root, int key){
 
-    while (true)
-    {
-        cout << "Press 1 to enter, 2 to delete. Press 3 to exit";
-        int choice;
-        cin >> choice;
+// }
 
-        if (choice == 1)
-        {
-            int item;
-            cout << "Enter the item to be inserted : ";
-            cin >> item;
-            insert_node(item, root_ptr);
-        }
+int main(){
 
-        else if (choice == 2)
-        {
-            int item;
-            cout << "Enter the item to be deleted : ";
-            cin >> item;
-            delete_node(item, root_ptr);
-        }
+    Node* root = new Node(5);
+    insert(root, 6);
+    cout<<(search(root, 6)?"True" : "False")<<endl;
+    cout<<search_with_ptr(root, 6).first->data;
+    cout<<search_with_ptr(root, 6).second->data;
 
-        else if (choice == 3)
-        {
-            break;
-        }
-
-        else
-        {
-            cout << "Please enter a valid choice : " << endl;
-        }
-    }
+    return 0;
 }

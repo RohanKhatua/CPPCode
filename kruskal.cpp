@@ -92,6 +92,7 @@ int main() {
             int greater_vertex = max(current_edge.vertices.first, current_edge.vertices.second);
 
             vi greater_set;
+            vi smaller_set;
 
             vector<vector<int>>::iterator greater_it;
             vector<vector<int>>::iterator smaller_it;
@@ -106,7 +107,6 @@ int main() {
                 }
             }
 
-            vi smaller_set;
 
             for (int i = 0; i < node_sets.size(); i++) {
                 vi node_set = node_sets[i];
