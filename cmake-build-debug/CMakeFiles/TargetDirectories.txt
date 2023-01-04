@@ -10,7 +10,8 @@ C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/testing.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/kruskal.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/BST.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/fast_mult.dir
-C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/karatsuba.dir
-C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/frac_knapsack.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/karatsuba_21BCE3982.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/frac_knapsack_21BCE3982.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/graph_coloring.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir

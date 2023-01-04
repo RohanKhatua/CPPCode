@@ -21,7 +21,8 @@ add_executable(testing testing.cpp)
 add_executable(kruskal kruskal.cpp)
 add_executable(BST BST.cpp)
 add_executable(fast_mult fast_mult.cpp)
-add_executable(karatsuba karatsuba.cpp karatsuba_21BCE3982.cpp)
-add_executable(frac_knapsack frac_knapsack.cpp)
+
+
 add_executable(karatsuba_21BCE3982 karatsuba_21BCE3982.cpp)
 add_executable(frac_knapsack_21BCE3982 frac_knapsack_21BCE3982.cpp)
+add_executable(graph_coloring graph_coloring.cpp)
