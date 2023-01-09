@@ -25,4 +25,4 @@ add_executable(fast_mult fast_mult.cpp)
 
 add_executable(karatsuba_21BCE3982 karatsuba_21BCE3982.cpp)
 add_executable(frac_knapsack_21BCE3982 frac_knapsack_21BCE3982.cpp)
-add_executable(graph_coloring graph_coloring.cpp)
+add_executable(graph_coloring graph_coloring_21BCE3982.cpp)
