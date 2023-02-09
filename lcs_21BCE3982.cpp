@@ -61,11 +61,10 @@ int main()
     cin>>x;
     cout<<"Enter second String : ";
     cin>>y;
-    cout<<"Enter length of Subsequence : ";
-    int k;
-    cin>>k; 
+    
     int m = x.length();
     int n = y.length();
+    int k = min(m,n);
 
     cout<<"Common Subsequences of length less than "<<k<<" are : "<<endl;
 
