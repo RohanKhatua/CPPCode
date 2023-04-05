@@ -27,5 +27,9 @@ add_executable(karatsuba_21BCE3982 karatsuba_21BCE3982.cpp)
 add_executable(frac_knapsack_21BCE3982 frac_knapsack_21BCE3982.cpp)
 add_executable(graph_coloring graph_coloring_21BCE3982.cpp)
 add_executable(nqueens21BCE3982 nqueens21BCE3982.cpp)
-add_executable(lcs lcs.cpp)
-add_executable(01knapsackdp 01knapsackdp.cpp)
+
+
+
+add_executable(bounds bounds.cpp)
+add_executable(encrypted_string string_sum.cpp)
+add_executable(ford_fulkerson ford_fulkerson.cpp)

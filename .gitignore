@@ -58,3 +58,5 @@ CMakeLists.txt
 .vscode/settings.json
 .vscode/launch.json
 .vscode/settings.json
+cmake-build-debug/CMakeFiles/TargetDirectories.txt
+cmake-build-debug/Testing/Temporary/LastTest.log
