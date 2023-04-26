@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int count = 0;
+int counter = 0;
 
 //Function which checks if a queen can be placed at a given position
 bool safe(int k, vector<int> &x) {
@@ -14,7 +14,7 @@ bool safe(int k, vector<int> &x) {
 //Utility function to print the board
 void print(vector<int> &x) {
     int n = x.size() - 1;
-    cout << "Solution #" << ++count << ":" << endl;
+    cout << "Solution #" << ++counter << ":" << endl;
     for (int i = 1; i <= n; i++) {
         for (int j = 1; j <= n; j++)
             if (x[i] == j)
@@ -45,7 +45,7 @@ int main() {
     cin >> n;
     vector<int> x(n + 1);
     nqueens(1, n, x);
-    if (count == 0)
+    if (counter == 0)
         cout << "No solution" << endl;
     return 0;
 }

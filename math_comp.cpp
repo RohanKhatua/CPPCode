@@ -4,8 +4,8 @@ using namespace std;
 int main()
 {
 
-    float mean = 59.94;
-    vector<float> values = {68, 72, 77, 42, 53, 72, 53, 63, 53, 48, 60, 82, 64, 75, 72, 48, 61, 57, 64, 50, 64, 65, 70, 68, 53};
+    float mean = 84.75;
+    vector<float> values = {43.8,71,81.4,142.8};
     float sst = 0;
 
     for (int value : values)
