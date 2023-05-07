@@ -20,5 +20,6 @@ C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/ford_fulkerson.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/naive_matcher.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/kmp.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/winner.dir
+C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/lex_analysis.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/edit_cache.dir
 C:/Users/khatu/github/CPPCode/cmake-build-debug/CMakeFiles/rebuild_cache.dir

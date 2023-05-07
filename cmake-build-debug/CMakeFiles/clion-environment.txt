@@ -1,4 +1,4 @@
-ToolSet: w64 9.0 (local)@C:\Users\khatu\AppData\Local\JetBrains\Toolbox\apps\CLion\ch-0\223.7571.171\bin\mingw
+ToolSet: 5.0 (local)@C:\MinGW
 Options: 
 
 Options:
