@@ -42,3 +42,8 @@ add_executable(id_const id_const_21BCE3982.cpp)
 add_executable(string_check string_check_21BCE3982.cpp)
 add_executable(string_check_2 string_check_21BCE3982.cpp)
 add_executable(operator_check operator_check_21BCE3982.cpp)
+
+add_executable(LL_1_21BCE3982 LL_1_21BCE3982.cpp)
+add_executable(rd rd_21BCE3982.cpp)
+add_executable(op_pred op_pred_21BCE3982.cpp)
+add_executable(crc crc.cpp)
