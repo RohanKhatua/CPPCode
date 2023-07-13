@@ -30,6 +30,7 @@
   ],
   "files.associations": {
     "iostream": "cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "socket.h": "c"
   }
 }

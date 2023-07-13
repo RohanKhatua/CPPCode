@@ -100,7 +100,7 @@ void arrangeSJF(vector<Job> &jobs){
     }
 
     
-    //storing start and times
+    //storing start and end times
     for (auto timeJobPair : timeJobMap){
         int jobIndex = timeJobPair.second-1;
         if (timeJobPair.first<start_times[jobIndex]){
