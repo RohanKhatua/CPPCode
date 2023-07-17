@@ -3,24 +3,31 @@
 #include <stdlib.h>
 #include <string.h>
 #include <sys/socket.h>
-#include <unistd.h>
+// #include <unistd.h>
 #include <stdbool.h>
+
 #define PORT 8080
 #define MAX_MESSAGE_LENGTH 1024
+
 int main(int argc, char const *argv[])
 {
     int server_fd, new_socket, valread;
+
     struct sockaddr_in address;
-    int opt = 1;
+
     int addrlen = sizeof(address);
     char buffer[MAX_MESSAGE_LENGTH] = {0};
     char message[MAX_MESSAGE_LENGTH];
+
     // Create socket file descriptor
-    if ((server_fd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    server_fd = socket(AF_INET, SOCK_STREAM, 0);
+    if (server_fd < 0)
     {
         perror("Socket Creation Failed");
         exit(EXIT_FAILURE);
     }
+
+    int opt = 1;
     // Set socket options
     if (setsockopt(server_fd, SOL_SOCKET, SO_REUSEADDR, &opt,
                    sizeof(opt)) < 0)
@@ -28,12 +35,14 @@ int main(int argc, char const *argv[])
         perror("Setting Socket options failed");
         exit(EXIT_FAILURE);
     }
+
     //Define address parameters
     address.sin_family = AF_INET;
     address.sin_addr.s_addr = INADDR_ANY;
     address.sin_port = htons(PORT);
+
     // Bind socket to specified address and port
-    if (bind(server_fd, (struct sockaddr *)&address,
+    if (bind(server_fd, (struct sockaddr *)(&address),
              sizeof(address)) < 0)
     {
         perror("Bind Failed");
@@ -56,6 +65,7 @@ int main(int argc, char const *argv[])
     char clientAddress[INET_ADDRSTRLEN];
     inet_ntop(AF_INET, &(address.sin_addr), clientAddress,
               INET_ADDRSTRLEN);
+
     printf("Client connected from address: %s\n", clientAddress);
     // Receiving and sending messages in a loop
     while (true)
@@ -83,12 +93,16 @@ int main(int argc, char const *argv[])
         }
         message[message_length] = '\0';
         printf("Client: %s\n", message);
+
         // Server enters message
         printf("Server: ");
         fgets(buffer, sizeof(buffer), stdin);
-        buffer[strcspn(buffer, "\n")] = '\0'; // replace newline with terminator
-            // If server wishes to close the connection
-            if (strcmp(buffer, "close") == 0)
+        int buffer_length = strcspn(buffer, "\n"); //size of server message
+        
+        buffer[buffer_length] = '\0'; // replace newline with terminator
+
+        // If server wishes to close the connection
+        if (strcmp(buffer, "close") == 0)
         {
             printf("Server closed connection via close\n");
             break;
