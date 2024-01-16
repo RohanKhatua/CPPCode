@@ -1,6 +1,3 @@
-from ssl import _Cipher
-
-
 class PlayfairCipher:
     def __init__ (self, keyword):
         self.matrix = self.create_matrix(keyword)
@@ -45,15 +42,17 @@ class PlayfairCipher:
     # This function prepares the plaintext for encryption
     def preprocess (self, text):
         
-        text = text.upper().replace("J", "I").replace(" ","")
-        text = self.replace_digits_with_words(text)
+        text = text.upper() #Convert to uppercase
+        text = self.replace_digits_with_words(text) # Replace digits with spelled out numbers
+        text = text.replace("J", "I") # Replace J with I
+        text = ''.join([char for char in text if char.isalpha()]) # Remove all non-alphabetic characters such as spaces anb punctuation
         processed_text = ""
 
         i = 0
         while i < len(text):
             # Same letter in digram
             if i + 1 < len(text) and text[i] == text[i+1]:
-                processed_text += text[i] + "X"
+                processed_text += text[i] + "X" # Add X to separate repeated letters
                 i+=1
             else: 
                 processed_text += text[i]
@@ -62,9 +61,9 @@ class PlayfairCipher:
                 i+=2
                 
         if len(processed_text) %2 !=0:
-            processed_text += "X"
+            processed_text += "X" # Add X at the end if number of characters is odd
             
-        print ("Processed Text = ", processed_text)    
+        print ("Processed Text =", processed_text)    
         return processed_text
     
     def find_position (self, char):
@@ -123,7 +122,7 @@ plaintext = input("Plaintext : ")
 
 cipher = PlayfairCipher(keyword)
 cipher_text = cipher.encrypt(plaintext)
-print("Encrypted Text = ", cipher_text)
+print("Encrypted Text =", cipher_text)
 
 decrypted_text = cipher.decrypt(cipher_text)
-print("Decrypted Text = ", decrypted_text)
+print("Decrypted Text =", decrypted_text)
