@@ -45,7 +45,7 @@ class PlayfairCipher:
         text = text.upper() #Convert to uppercase
         text = self.replace_digits_with_words(text) # Replace digits with spelled out numbers
         text = text.replace("J", "I") # Replace J with I
-        text = ''.join([char for char in text if char.isalpha()]) # Remove all non-alphabetic characters such as spaces anb punctuation
+        text = ''.join([char for char in text if char.isalpha()]) # Remove all non-alphabetic characters such as spaces and punctuation
         processed_text = ""
 
         i = 0
