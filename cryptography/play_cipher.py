@@ -103,7 +103,7 @@ class PlayfairCipher:
             digram = plaintext[i]+plaintext[i+1]
             encrypted_pair = self.encrypt_pair(plaintext[i],plaintext[i+1])
             res = res + encrypted_pair
-            print("[{}]-->[{}]".format(digram, encrypted_pair))
+            # print("[{}]-->[{}]".format(digram, encrypted_pair))
         return res
         
     def decrypt (self, ciphertext):
@@ -113,7 +113,7 @@ class PlayfairCipher:
             digram = ciphertext[i]+ciphertext[i+1]
             decrypted_pair = self.decrypt_pair(ciphertext[i], ciphertext[i+1])
             res = res + decrypted_pair
-            print("[{}]-->[{}]".format(digram, decrypted_pair))
+            # print("[{}]-->[{}]".format(digram, decrypted_pair))
         return res       
                 
                 

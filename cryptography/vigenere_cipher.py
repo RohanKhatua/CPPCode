@@ -42,7 +42,7 @@ class VigenereCipher:
             shift = self._key_shift(i)
             shifted_char = self._shift_char(char, shift)
             encrypted += shifted_char
-            print(f"{char}-->{shifted_char} [Shift = {shift}]")
+            # print(f"{char}-->{shifted_char} [Shift = {shift}]")
         return encrypted
     
     def decrypt(self, ciphertext):
@@ -52,7 +52,7 @@ class VigenereCipher:
             shift = -self._key_shift(i)
             shifted_char = self._shift_char(char, shift)
             decrypted += shifted_char
-            print(f"{char}-->{shifted_char} [Shift = {shift}]")
+            # print(f"{char}-->{shifted_char} [Shift = {shift}]")
         return decrypted
     
 # Example usage

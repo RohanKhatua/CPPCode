@@ -41,7 +41,7 @@ class HillCipher:
             result_vector = (self.key_matrix * vector) % 26
             initial = numbers_to_text(list(vector))
             res = numbers_to_text(list(result_vector))
-            print(f"[{initial}]-->[{res}]")
+            # print(f"[{initial}]-->[{res}]")
             encrypted += res
             
         return encrypted
@@ -54,7 +54,7 @@ class HillCipher:
             result_vector = (self.inverse_key_matrix * vector) % 26
             initial = numbers_to_text(list(vector))
             res = numbers_to_text(list(result_vector))
-            print(f"[{initial}]-->[{res}]")
+            # print(f"[{initial}]-->[{res}]")
             decrypted += res
 
         return decrypted
