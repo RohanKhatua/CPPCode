@@ -1,5 +1,8 @@
 def hex_to_bin(hex_string):
     return ''.join(format(int(c, 16), '04b') for c in hex_string)
+    
+def bin_to_hex(bin_string):
+    return hex(int(bin_string, 2))[2:]
 
 def permute(input_key, permutation_table, length):
     return ''.join(input_key[i-1] for i in permutation_table[:length])
@@ -28,7 +31,7 @@ def key_schedule(base_key, parity_drop_table, shift_table, key_compression_table
 
 def main():
     base_key = "AABB09182736CCDD"
-    
+    print(f"Base Key Length = {len(base_key)}")
     # Key generation
     # --hex to binary
     key = hex_to_bin(base_key)
@@ -62,7 +65,7 @@ def main():
     round_keys = key_schedule(key, parity_drop_table, shift_table, key_compression_table)
     
     for i, key in enumerate(round_keys):
-        print(f"Round Key {i+1} = {key}")
+        print(f"Round Key {i+1} = {bin_to_hex(key)}")
         
 if __name__ == "__main__":
     main()
